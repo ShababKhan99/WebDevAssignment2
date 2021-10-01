@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function output(each) {
+    document.write("<br>"+each)
+}
+let array = ['a', 'b', 'c'];
+function myEach(array, callback) {
+    for (let i = 0; i < array.length; i++) {
+        callback(array[i])
+    }
+}
+
+myEach(array, output);
+
+let input = [1,4,9,16];
+function myMap(array, callback) {
+    let newarray = [];
+    let value = 0;
+    for (let i = 0; i < input.length; i++) {
+        value = input[i] * 2;
+        newarray.push(value);
+}
+
+for(let j = 0 ; j < newarray.length; j++)
+    callback(newarray[j]);
+  
+}
+
+myMap(input, output);
+</script>
+
