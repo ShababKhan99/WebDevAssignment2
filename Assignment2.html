@@ -15,20 +15,20 @@ function myEach(array, callback) {
 
 myEach(array, output);
 
-let input = [1,4,9,16];
-function myMap(array, callback) {
+let array1 = [1,4,9,16];
+function myMap(ranks, callback) {
     let newarray = [];
     let value = 0;
-    for (let i = 0; i < input.length; i++) {
-        value = input[i] * 2;
+    for (let i = 0; i < array1.length; i++) {
+        value = (array1[i]*2);
         newarray.push(value);
-}
+    }
 
 for(let j = 0 ; j < newarray.length; j++)
     callback(newarray[j]);
   
 }
 
-myMap(input, output);
+myMap(array1, output);
 </script>
 
