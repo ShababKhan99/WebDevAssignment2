@@ -30,5 +30,21 @@ for(let j = 0 ; j < newarray.length; j++)
 }
 
 myMap(array1, output);
+
+let words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+function myFilter(words, callback) {
+    let bigWords = [];
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].length > 6) {
+            bigWords.push(words[i]);
+        }
+    }
+
+    for(let j = 0 ; j < bigWords.length; j++)
+        callback(bigWords[j]);
+  
+}
+
+myFilter(words, output);
 </script>
 
