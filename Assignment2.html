@@ -75,5 +75,21 @@ function myEvery(arr2,callback){
 
 myEvery(arr2,output);
 
+let arr3 = [1,2,3,4];
+function myReduce(arr3,callback,extra){
+    extra = extra || 0;
+    let value = 0;
+    for (let i = 0; i < arr3.length; i++){
+        value = value + arr3[i];
+    }
+
+    value = value + extra;
+
+    callback(value)
+}
+
+myReduce(arr3,output);
+myReduce(arr3,output,5);
+
 </script>
 
