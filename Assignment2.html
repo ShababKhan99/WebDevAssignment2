@@ -51,7 +51,7 @@ let numbers = [1,2,3,4,5];
 function mySome(numbers,callback){
     let even = false;
     for (let i = 0; i < numbers.length; i++){
-        if(numbers[i] % 2){
+        if(numbers[i] % 2 === 0){
             even = true;
         }
     }
@@ -60,6 +60,20 @@ function mySome(numbers,callback){
 }
 
 mySome(numbers,output);
+
+let arr2 = [1,30,39,29,10,13]
+function myEvery(arr2,callback){
+    let all = true;
+    for (let i = 0; i < arr2.length; i++){
+        if(arr2[i] > 40){
+            all = false;
+        }
+    }
+
+    callback(all);
+}
+
+myEvery(arr2,output);
 
 </script>
 
