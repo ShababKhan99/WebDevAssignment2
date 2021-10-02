@@ -108,5 +108,23 @@ myIncludes(arr4,2,output);
 myIncludes(pets,'cat',output);
 myIncludes(pets,'at',output);
 
+let beasts = ['ant','bison', 'camel', 'duck', 'bison'];
+function myIndexOf(beasts,goalBeast,callback,fromIndex){
+    fromIndex = fromIndex || 0;
+    let indexValue = -1;
+    for(let i = fromIndex; i < beasts.length; i++){
+        if(beasts[i] === goalBeast){
+            indexValue = i;
+            break;
+        }
+    }
+
+    callback(indexValue);
+}
+
+myIndexOf(beasts,'bison',output);
+myIndexOf(beasts,'bison',output,2);
+myIndexOf(beasts,'giraffe',output);
+
 </script>
 
