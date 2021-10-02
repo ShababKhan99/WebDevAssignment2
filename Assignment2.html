@@ -91,5 +91,22 @@ function myReduce(arr3,callback,extra){
 myReduce(arr3,output);
 myReduce(arr3,output,5);
 
+let arr4 = [1,2,3];
+let pets = ['cat','dog','bat'];
+function myIncludes(arr4,goal,callback){
+    let bool = false;
+    for(let i = 0; i < arr4.length; i++){
+        if(arr4[i] === goal){
+            bool = true;
+        }
+    }
+
+    callback(bool);
+}
+
+myIncludes(arr4,2,output);
+myIncludes(pets,'cat',output);
+myIncludes(pets,'at',output);
+
 </script>
 
