@@ -157,5 +157,18 @@ function myLastIndexOf(lastIndexAnimals,callback,goalWord,startPoint){
 myLastIndexOf(lastIndexAnimals,output,'Dodo');
 myLastIndexOf(lastIndexAnimals,output,'Tiger');
 myLastIndexOf(lastIndexAnimals,output,'Dodo',2);
+
+let object1 = {a:'somestring', b: 42, c: false};
+function grabKeys(keysObject,callback){
+    let arr1 = [];
+    for(i in keysObject) {
+        arr1.push(i);
+    }
+
+    callback(arr1)
+}
+
+grabKeys(object1,output);
+
 </script>
 
