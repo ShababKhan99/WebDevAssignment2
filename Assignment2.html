@@ -138,5 +138,24 @@ myPush(animals,output,'cows');
 output(animals);
 myPush(animals,output,'chickens','cats','dogs');
 output(animals);
+
+let lastIndexAnimals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+function myLastIndexOf(lastIndexAnimals,callback,goalWord,startPoint){
+    startPoint = startPoint || (lastIndexAnimals.length-1);
+
+    let lastIndexValue = -1;
+    for(let i = startPoint; i > -1; i--){
+        if(lastIndexAnimals[i] === goalWord){
+            lastIndexValue = i;
+            break;
+        }
+    }
+
+    callback(lastIndexValue);
+}
+
+myLastIndexOf(lastIndexAnimals,output,'Dodo');
+myLastIndexOf(lastIndexAnimals,output,'Tiger');
+myLastIndexOf(lastIndexAnimals,output,'Dodo',2);
 </script>
 
