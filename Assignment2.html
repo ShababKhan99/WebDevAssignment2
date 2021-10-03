@@ -159,16 +159,28 @@ myLastIndexOf(lastIndexAnimals,output,'Tiger');
 myLastIndexOf(lastIndexAnimals,output,'Dodo',2);
 
 let object1 = {a:'somestring', b: 42, c: false};
+
 function grabKeys(keysObject,callback){
     let arr1 = [];
     for(i in keysObject) {
         arr1.push(i);
     }
 
-    callback(arr1)
+    callback(arr1);
 }
 
 grabKeys(object1,output);
+
+function grabValues(grabObject,callback){
+    let arr2 = [];
+    for(i in grabObject){
+        arr2.push(grabObject[i]);
+    }
+
+    callback(arr2);
+}
+
+grabValues(object1,output);
 
 </script>
 
