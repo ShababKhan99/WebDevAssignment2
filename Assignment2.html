@@ -126,5 +126,17 @@ myIndexOf(beasts,'bison',output);
 myIndexOf(beasts,'bison',output,2);
 myIndexOf(beasts,'giraffe',output);
 
+let animals = ['pigs','goats','sheep'];
+function myPush(animals,callback,...strings){
+    for(let i = 2; i < arguments.length; i++){
+        animals[animals.length] = arguments[i];
+    }
+    callback(animals.length);
+}
+
+myPush(animals,output,'cows');
+output(animals);
+myPush(animals,output,'chickens','cats','dogs');
+output(animals);
 </script>
 
